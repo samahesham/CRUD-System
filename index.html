@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+  <body>
+    <div class="w-75 mx-auto bg-info rounded p-3 mt-4">
+      <h1 class="text-center">CRUD System</h1>
+      <div>
+        <label for="productNameInput">Product Name</label>
+        <input class="form-control" type="text" name="" id="productNameInput" />
+      </div>
+      <div>
+        <label for="productPriceInput">Product Price</label>
+        <input
+          class="form-control"
+          type="number"
+          name=""
+          id="productPriceInput"
+        />
+      </div>
+      <div>
+        <label for="productCategoryInput">Product Category</label>
+        <input
+          class="form-control"
+          type="text"
+          name=""
+          id="productCategoryInput"
+        />
+      </div>
+      <div>
+        <label for="productDescriptionInput">Product Description</label>
+        <textarea
+          class="form-control"
+          name=""
+          id="productDescriptionInput"
+        ></textarea>
+      </div>
+      <button onclick="addProduct();" class="btn btn-primary mt-3 w-100" id="addBTN">
+        Add Product
+      </button>
+      <button class="btn btn-primary mt-3 w-100 d-none" id="updateBTN" onclick="updateProduct();">
+        Update Product
+      </button>
+      <input
+        oninput="searchByName()"
+        type="search"
+        name=""
+        id="searchInput"
+        class="form-control my-3 w-50 mx-auto"
+        placeholder="Search By Name..."
+      />
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+      </table>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
